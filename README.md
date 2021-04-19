@@ -15,7 +15,7 @@ Currently we are following a simple white and black theme.
 Use the below specified font for this entire Project.\
 Font Family : barlow, sans-serif;
 
-Refer to the follwing website for size and formatting : https://dscvit.com/
+Refer to the following website for size and formatting : https://dscvit.com/
 
 
 ## File Structure
