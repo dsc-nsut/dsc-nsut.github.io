@@ -3,10 +3,10 @@
 For the purpose of this project make sure you follow the below mentioned guidelines for choosing the theme, font, colour scheme and layout while working on respective issues.
 
 ## Basic Guidelines
- 1. The entire content should be center aligned.
- 2. For sections containing multiple cards or blocks, strictly follow the grid layout mentioned in the issue itself.
- 3. While working along with someone else on the same file, make sure you "git pull" recent changes made to the page before pushing to avoid merge conflicts.
- 4. In case you do not wish to add description content right away, fill lorem ipsum text wherever required.
+ 1. For sections containing multiple cards or blocks, strictly follow the grid layout mentioned in the issue itself.
+ 2. While working along with someone else on the same file, make sure you "git pull" recent changes made to the page before pushing to avoid merge conflicts.
+ 3. In case you do not wish to add description content right away, fill lorem ipsum text wherever required.
+ 4. Try to keep all the components center-aligned and symmetrical.
 
 
 ## How to Contribute 
@@ -22,6 +22,7 @@ Once you feel you have completed the sub-tasks specified in the issue, take a sc
 
 ## Theme and Font
 Currently we are following a simple white and black theme.
+If you wish to add images, gifs or any other form of animation, try to use a combination of Red, Green, Blue and Yellow wherever possible.
 
 Use the below specified font for this entire Project.\
 Font Family : barlow, sans-serif;
