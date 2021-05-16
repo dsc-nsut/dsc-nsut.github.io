@@ -1,0 +1,18 @@
+@media only screen and (max-width: 750px) {
+  .default-nav {
+    display: none;
+  }
+  .mobile-nav-btn {
+    display: flex;
+  }
+
+  .side-nav {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  header {
+    padding: 1.5rem 2rem;
+  }
+}
