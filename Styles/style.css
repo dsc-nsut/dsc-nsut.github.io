@@ -1,0 +1,299 @@
+/*--------------------------------*/
+/* BASIC SETUP */
+/*--------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+html {
+  font-size: 62.5%; /* So that 1rem = 10px */
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  text-rendering: optimizeLegibility;
+  background-color: #fff;
+  color: #000;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+.hidden {
+  display: none !important;
+}
+
+/*--------------------------------*/
+/* NAVBAR */
+/*--------------------------------*/
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 4rem;
+  height: 9rem;
+  background-color: transparent;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+
+header.sticky {
+  box-shadow: 0rem 0.1rem 1.6rem 0rem rgba(0, 0, 0, 0.164);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li {
+  display: inline-block;
+  padding: 0.7rem 1.8rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+header nav ul li:last-of-type {
+  padding-right: 0;
+}
+
+header nav ul li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 0.3rem;
+  transform: translateX(-50%);
+  background-color: #4285f4;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  width: 0;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+
+header nav ul li.active::after {
+  width: 60%;
+}
+
+header .logo-container {
+  width: 5rem;
+  max-width: 5rem;
+  overflow: hidden;
+  user-select: none;
+}
+
+header .logo-container img {
+  width: 100%;
+}
+
+header nav ul li:hover::after {
+  width: 60%;
+}
+
+/* MOBILE NAV */
+
+.mobile-nav-btn {
+  height: 6rem;
+  width: 6rem;
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 99;
+}
+
+.symbol-container {
+  width: 4rem;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.mobile-nav-btn span {
+  height: 0.2rem;
+  width: 2rem;
+  display: inline-block;
+  background-color: #000;
+  position: relative;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transform: rotate(0);
+  -webkit-transform: rotate(0);
+  -moz-transform: rotate(0);
+  -ms-transform: rotate(0);
+  -o-transform: rotate(0);
+}
+
+.mobile-nav-btn span::after {
+  content: '';
+  display: inline-block;
+  width: 3rem;
+  height: 0.2rem;
+  background-color: #000;
+  position: absolute;
+  top: -1rem;
+  right: 0;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transform: rotate(0);
+  -webkit-transform: rotate(0);
+  -moz-transform: rotate(0);
+  -ms-transform: rotate(0);
+  -o-transform: rotate(0);
+}
+
+.mobile-nav-btn span::before {
+  content: '';
+  display: inline-block;
+  width: 4rem;
+  height: 0.2rem;
+  background-color: #000;
+  position: absolute;
+  bottom: -1rem;
+  right: 0;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transform: rotate(0);
+  -webkit-transform: rotate(0);
+  -moz-transform: rotate(0);
+  -ms-transform: rotate(0);
+  -o-transform: rotate(0);
+}
+
+/* .mobile-nav-btn:hover span,
+.mobile-nav-btn:hover span::after {
+  width: 4rem;  
+} */
+
+.mobile-nav-btn.active span::after {
+  opacity: 0;
+}
+
+.mobile-nav-btn.active span {
+  width: 4rem;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+}
+
+.mobile-nav-btn.active span::before {
+  width: 4rem;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  bottom: 0;
+}
+
+/* SIDE-NAV */
+
+.side-nav {
+  position: fixed;
+  right: -30rem;
+  min-height: 100vh;
+  top: 0;
+  width: 25rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  box-shadow: -3px 2px 16px 6px rgba(64, 64, 64, 0.1);
+  -webkit-box-shadow: -3px 2px 16px 6px rgba(64, 64, 64, 0.1);
+  -moz-box-shadow: -3px 2px 16px 6px rgba(64, 64, 64, 0.1);
+  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  display: none;
+}
+
+.side-nav.active {
+  right: 0;
+  opacity: 1;
+}
+
+.side-nav ul li {
+  font-size: 2rem;
+  display: block;
+  padding: 0.7rem 1.8rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  position: relative;
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.side-nav ul li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 0.3rem;
+  transform: translateX(-50%);
+  background-color: #4285f4;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  width: 0%;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+
+.side-nav ul li.active::after {
+  width: 60%;
+}
+
+/*SECTIONS*/
+section {
+  height: 100vh;
+}
