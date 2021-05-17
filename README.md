@@ -34,7 +34,7 @@ Refer to the following website for size and formatting : https://dscvit.com/
 Having a proper and efficient file structure is very important while working on a project with multiple editors.\
 It is imperative that you adhere to the following layout whenever you add a new file to this project.
 
-1. Layouts folder : contains all the HTML files 
+1. Layouts folder : contains all the HTML files *( exception : index.html to be in the root directory)*
 2. Styles folder : contains CSS files
 3. Images folder : contains images
 4. Scripts folder : contains javaScript files
