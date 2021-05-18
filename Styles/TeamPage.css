@@ -330,12 +330,6 @@ hr{
         width:100px;
         height:100px;
     }
-    .Page-heading>h1{
-        font-size: 30px;
-    }
-    .Page-heading>p{
-        font-size: 20px;
-    }
     .mentor-box{
         flex-direction: column;
         width: 65%;
