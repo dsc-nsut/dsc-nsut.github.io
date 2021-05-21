@@ -1,3 +1,5 @@
+'use strict';
+
 {
   // TOGGLING THE NAV BUTTON
   const mobile_nav_btn = document.querySelector('.mobile-nav-btn');
@@ -224,29 +226,30 @@
 /*------------------------------*/
 /* INPUT ANIMATION*/
 /*------------------------------*/
+{
+  const input = document.querySelector('input[name="newsletter"]');
+  input.addEventListener('focus', (e) => {
+    const parent = e.target.parentNode;
+    parent.classList.add('focus');
+  });
 
-const input = document.querySelector('input[name="newsletter"]');
-input.addEventListener('focus', (e) => {
-  const parent = e.target.parentNode;
-  parent.classList.add('focus');
-});
+  input.addEventListener('blur', (e) => {
+    const parent = e.target.parentNode;
+    if (e.target.value !== '') return;
+    parent.classList.remove('focus');
+  });
 
-input.addEventListener('blur', (e) => {
-  const parent = e.target.parentNode;
-  if (e.target.value !== '') return;
-  parent.classList.remove('focus');
-});
-
-const form = document.querySelector('form.newsletter-box');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const inputContainer = form.querySelector('.input-container');
-  const button = form.querySelector('button');
-  const msg = form.querySelector('.msg');
-  inputContainer.classList.add('hide');
-  input.value = '';
-  button.classList.add('hide');
-  setTimeout(() => {
-    msg.classList.remove('hide');
-  }, 100);
-});
+  const form = document.querySelector('form.newsletter-box');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const inputContainer = form.querySelector('.input-container');
+    const button = form.querySelector('button');
+    const msg = form.querySelector('.msg');
+    inputContainer.classList.add('hide');
+    input.value = '';
+    button.classList.add('hide');
+    setTimeout(() => {
+      msg.classList.remove('hide');
+    }, 100);
+  });
+}
