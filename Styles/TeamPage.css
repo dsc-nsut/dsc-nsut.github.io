@@ -37,18 +37,7 @@ html {
 .Page-head {
   margin-top: 100px;
 }
-.squad {
-  font-size: 2.8rem;
-}
-.squad::after {
-  content: '';
-  position: absolute;
-  margin-left: -17rem;
-  width: 15%;
-  height: 4px;
-  left: 54%;
-  background-color: var(--logo-blue);
-}
+
 .squad-description {
   margin: auto;
   margin-top: 2.5rem;
@@ -109,7 +98,7 @@ hr {
   font-weight: 600;
 }
 
-.team-member-container > div:nth-child(n) img {
+/* .team-member-container > div:nth-child(n) img {
   box-shadow: 0 0 10px 1px red, 0 0 0 10px inset black;
   border: 1px solid red;
 }
@@ -124,11 +113,11 @@ hr {
 .team-member-container > div:nth-child(4n) img {
   box-shadow: 0 0 10px 1px blue;
   border: 1px solid blue;
-}
-.mentor-box img {
+} */
+/* .mentor-box img {
   box-shadow: 0 0 10px 1px var(--logo-blue);
   border: 1px solid var(--logo-blue);
-}
+} */
 
 .member-box {
   transition: all 0.5s ease-out;
@@ -137,7 +126,7 @@ hr {
   margin-top: 15px;
   /* border: 1px solid black; */
   border-radius: 10px;
-  border: 0.2px solid rgb(230, 227, 227);
+  /* border: 0.2px solid rgb(247, 184, 184); */
   transition: all 0.3s ease;
 }
 
@@ -184,7 +173,7 @@ hr {
   justify-content: space-between;
 
   pointer-events: none;
-  /* opacity: 0; */
+  opacity: 0;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -351,6 +340,7 @@ hr {
   -ms-transform: translateY(-30px);
   -o-transform: translateY(-30px);
   pointer-events: all;
+  opacity: 1;
 }
 .mentor-box > .member-box:hover .member-desig,
 #core-team > .member-box:hover .member-desig {
@@ -377,3 +367,15 @@ hr {
 .member-socials i:hover {
   color: var(--logo-blue);
 }
+
+
+section {
+  padding: 0px;
+  margin: 0px;
+}
+section p{
+  width: 100%;
+  margin: 0px;
+}
+
+
