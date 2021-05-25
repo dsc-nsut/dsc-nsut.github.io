@@ -3,7 +3,7 @@
   --black: #282828;
   --logo-blue: #4285f4;
   --logo-green: #0f9d58;
-  --logo-red: #ea4335;
+  --logo-red: #faceca;
   --logo-yellow: #fbbc04;
   --gray-secondary: #777777;
   --main-shadow: 0.3rem 0.3rem 0.6rem 0rem rgba(0, 0, 0, 0.205);
@@ -359,4 +359,15 @@ section p{
   margin: 0px;
 }
 
-
+#particles-js{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* background-color: red; */
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+canvas{
+  display: block;
+}
