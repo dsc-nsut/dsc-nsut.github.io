@@ -36,7 +36,7 @@ html {
 
 /* page heading */
 .Page-head {
-  margin-top: 100px;
+  margin-top: 140px;
 }
 
 .squad-description {
@@ -137,6 +137,8 @@ hr {
   height: 180px;
   border-radius: 50%;
   z-index: -2;
+  object-fit: cover;
+  object-position: top;
 }
 .mentor-box img,
 #core-team img {
@@ -188,15 +190,30 @@ hr {
 }
 
 .hide-btn {
-  padding: 13px 50px;
+  /* padding: 13px 50px;
   font-size: 15px;
   border-radius: 2px;
   background-color: black;
   color: white;
   box-shadow: 0 0 2px inset white;
   transition: all 0.2s linear;
-  border-radius: 10px;
-  cursor: pointer;
+  border-radius: 10px; */
+  display: inline-block;
+  padding: 10px 30px;
+  font-size: 15px;
+  font-weight: 300;
+  border: 0.1rem solid var(--black);
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+   margin: 0 auto;
+   width: 150px;
+   text-align: center;
+   cursor: pointer;
 }
 
 @media screen and (min-width: 1307px) {
@@ -278,7 +295,9 @@ hr {
 }
 
 @media screen and (max-width: 500px) and (min-width: 0px) {
-  
+  .team-member-container{
+    height: 620px;
+  }
 }
 
 
@@ -292,7 +311,7 @@ hr {
 
 /* hover and animationss */
 .member-box:hover {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
 }
 .mentor-box > .member-box:hover .member-socials,
 #core-team > .member-box:hover .member-socials {
