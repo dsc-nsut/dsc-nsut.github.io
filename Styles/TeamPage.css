@@ -3,7 +3,7 @@
   --black: #282828;
   --logo-blue: #4285f4;
   --logo-green: #0f9d58;
-  --logo-red: #ea4335;
+  --logo-red: #faceca;
   --logo-yellow: #fbbc04;
   --gray-secondary: #777777;
   --main-shadow: 0.3rem 0.3rem 0.6rem 0rem rgba(0, 0, 0, 0.205);
@@ -33,22 +33,12 @@ html {
   box-sizing: border-box;
 }
 
+
 /* page heading */
 .Page-head {
-  margin-top: 100px;
+  margin-top: 140px;
 }
-.squad {
-  font-size: 2.8rem;
-}
-.squad::after {
-  content: '';
-  position: absolute;
-  margin-left: -17rem;
-  width: 15%;
-  height: 4px;
-  left: 54%;
-  background-color: var(--logo-blue);
-}
+
 .squad-description {
   margin: auto;
   margin-top: 2.5rem;
@@ -72,7 +62,7 @@ hr {
   margin-bottom: 13rem;
 }
 .mentor-box {
-  width: 550px;
+  width: 55%;
   display: flex;
   margin: auto;
   justify-content: space-around;
@@ -82,17 +72,18 @@ hr {
 .team-member-container {
   margin: auto;
   width: 85%;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   height: 335px;
   overflow: hidden;
   /* box-shadow: 0px -10px 8px  inset rgb(201, 198, 198) ; */
-  margin-top: 40px;
-  margin-bottom: 50px;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
 }
 
 #core-team {
+  width: 90%;
   height: 390px;
 }
 
@@ -109,7 +100,7 @@ hr {
   font-weight: 600;
 }
 
-.team-member-container > div:nth-child(n) img {
+/* .team-member-container > div:nth-child(n) img {
   box-shadow: 0 0 10px 1px red, 0 0 0 10px inset black;
   border: 1px solid red;
 }
@@ -124,11 +115,11 @@ hr {
 .team-member-container > div:nth-child(4n) img {
   box-shadow: 0 0 10px 1px blue;
   border: 1px solid blue;
-}
-.mentor-box img {
+} */
+/* .mentor-box img {
   box-shadow: 0 0 10px 1px var(--logo-blue);
   border: 1px solid var(--logo-blue);
-}
+} */
 
 .member-box {
   transition: all 0.5s ease-out;
@@ -137,7 +128,7 @@ hr {
   margin-top: 15px;
   /* border: 1px solid black; */
   border-radius: 10px;
-  border: 0.2px solid rgb(230, 227, 227);
+  /* border: 0.2px solid rgb(247, 184, 184); */
   transition: all 0.3s ease;
 }
 
@@ -146,6 +137,8 @@ hr {
   height: 180px;
   border-radius: 50%;
   z-index: -2;
+  object-fit: cover;
+  object-position: top;
 }
 .mentor-box img,
 #core-team img {
@@ -184,7 +177,7 @@ hr {
   justify-content: space-between;
 
   pointer-events: none;
-  /* opacity: 0; */
+  opacity: 0;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -197,19 +190,34 @@ hr {
 }
 
 .hide-btn {
-  padding: 13px 50px;
+  /* padding: 13px 50px;
   font-size: 15px;
   border-radius: 2px;
   background-color: black;
   color: white;
   box-shadow: 0 0 2px inset white;
   transition: all 0.2s linear;
-  border-radius: 10px;
-  cursor: pointer;
+  border-radius: 10px; */
+  display: inline-block;
+  padding: 10px 30px;
+  font-size: 15px;
+  font-weight: 300;
+  border: 0.1rem solid var(--black);
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+   margin: 0 auto;
+   width: 150px;
+   text-align: center;
+   cursor: pointer;
 }
 
 @media screen and (min-width: 1307px) {
-  #web-team > div:nth-last-child(1) {
+  /* #web-team > div:nth-last-child(1) {
     grid-column: 4/5;
   }
   #web-team > div:nth-last-child(2) {
@@ -221,7 +229,7 @@ hr {
   #content-team > div:nth-last-child(1) {
     grid-column: 3/4;
   }
-
+} */
   #cp-btn {
     display: none;
   }
@@ -237,7 +245,7 @@ hr {
 }
 
 @media screen and (max-width: 1307px) and (min-width: 1033px) {
-  .team-member-container {
+  /* .team-member-container {
     grid-template-columns: repeat(4, 1fr);
   }
   #web-team > div:last-child {
@@ -268,68 +276,31 @@ hr {
   }
   #ML-team > div:nth-last-child(2) {
     grid-column: 2/3;
+  } */
+  #cp-btn{
+    display: none;
   }
+  #graphics-btn{
+    display: none;
+  }
+  
 }
 
 @media screen and (max-width: 1033px) and (min-width: 800px) {
-  .team-member-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  #web-team > div:last-child {
-    grid-column: 2/3;
-  }
-  #android-team > div:last-child,
-  #core-team > div:last-child {
-    grid-column: 2/3;
-  }
-  #android-team > div:nth-last-child(2),
-  #core-team > div:nth-last-child(2) {
-    grid-column: 3/4;
-  }
-  #ML-team > div:last-child {
-    grid-column: 2/3;
-  }
-  #ML-team > div:nth-last-child(2) {
-    grid-column: 3/4;
-  }
+  
 }
 
 @media screen and (max-width: 800px) and (min-width: 500px) {
-  .team-member-container,
-  #core-team {
-    grid-template-columns: repeat(2, 1fr);
-    height: 620px;
-  }
-  #web-team > div:last-child {
-    grid-column: 1/3;
-  }
+  
 }
 
 @media screen and (max-width: 500px) and (min-width: 0px) {
-  .team-member-container,
-  #core-team {
-    grid-template-columns: 1fr;
-    height: 640px;
-  }
-  .logo-img > img {
-    width: 100px;
-    height: 100px;
-  }
-  .mentor-box {
-    flex-direction: column;
-    width: 65%;
-    justify-content: center;
-    margin: auto;
+  .team-member-container{
+    height: 620px;
   }
 }
 
-/* For 4 member containers */
-#cp-team,
-#graphics-team {
-  grid-template-columns: repeat(auto-fit, 275px);
-  justify-items: center;
-  justify-content: center;
-}
+
 
 /* section adjustments */
 
@@ -337,11 +308,10 @@ hr {
   height: fit-content !important;
 }
 
-/* for aligining childs */
 
 /* hover and animationss */
 .member-box:hover {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
 }
 .mentor-box > .member-box:hover .member-socials,
 #core-team > .member-box:hover .member-socials {
@@ -351,6 +321,7 @@ hr {
   -ms-transform: translateY(-30px);
   -o-transform: translateY(-30px);
   pointer-events: all;
+  opacity: 1;
 }
 .mentor-box > .member-box:hover .member-desig,
 #core-team > .member-box:hover .member-desig {
@@ -376,4 +347,27 @@ hr {
 }
 .member-socials i:hover {
   color: var(--logo-blue);
+}
+
+
+section {
+  padding: 0px;
+  margin: 0px;
+}
+section p{
+  width: 100%;
+  margin: 0px;
+}
+
+#particles-js{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* background-color: red; */
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+canvas{
+  display: block;
 }
