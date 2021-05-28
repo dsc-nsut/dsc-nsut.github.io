@@ -2,6 +2,7 @@
   .default-nav {
     display: none;
   }
+
   .mobile-nav-btn {
     display: flex;
   }
@@ -131,8 +132,82 @@
   }
 }
 
+
+/* For Feed Page */
 @media only screen and (max-width: 400px) {
   header {
     padding: 1.5rem 2rem;
+  }
+
+  .row-content-temp{
+    padding: 50px 50px 0px 50px;
+    min-height: 50px;
+  }
+
+  .row-content{
+    padding: 0px;
+  }
+}
+
+
+@media only screen and (max-width: 750px){
+  
+  .overlay .redo{
+    margin: 20%;
+    width: 30%;
+  }
+  
+  .overlay .view{
+    border: 2px solid #fff;
+  }
+
+  #visit h1{
+    font-size: 20px;
+  }
+}
+
+
+@media only screen and (max-width: 450px){
+  .overlay .text{
+    padding: 2% 5%;
+  }
+
+  .overlay .redo{
+    margin: 20%;
+  }
+
+}
+
+
+@media only screen and (max-width: 350px){
+  .overlay .view{
+    display: none;
+  }
+  .overlay .redo{
+    text-align: center;
+    width: 50%;
+  }
+  .overlay .text{
+    padding: 0%;
+  }
+}
+
+
+@media only screen and (max-width: 750px){
+  .intermed h1{
+    margin: 3%;
+  }
+}
+
+@media only screen and (max-width: 450px){
+  #visit h1{
+    font-size: 1em;
+    margin: 3%;
+  }
+  
+  .visit-btn{
+    width: 25%;
+    height: 12%;
+    margin-top: 0%;
   }
 }

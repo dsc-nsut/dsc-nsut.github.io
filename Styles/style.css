@@ -145,7 +145,7 @@ header nav ul {
   align-items: center;
 }
 
-header nav ul li {
+header nav ul a {
   display: inline-block;
   padding: 0.7rem 1.8rem;
   font-size: 1.8rem;
@@ -154,11 +154,11 @@ header nav ul li {
   position: relative;
 }
 
-header nav ul li:last-of-type {
+header nav ul a:last-of-type {
   padding-right: 0;
 }
 
-header nav ul li::after {
+header nav ul a::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -178,7 +178,7 @@ header nav ul li::after {
   -o-transition: all 0.3s ease-out;
 }
 
-header nav ul li.active::after {
+header nav ul a.active::after {
   width: 60%;
 }
 
@@ -219,7 +219,7 @@ header .logo-container .logo-text p:last-of-type {
   letter-spacing: 0.1rem;
 }
 
-header nav ul li:hover::after {
+header nav ul a:hover::after {
   width: 60%;
 }
 
